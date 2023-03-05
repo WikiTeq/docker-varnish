@@ -53,7 +53,7 @@ RUN set -e;\
     deluser --remove-home builder; \
     chown varnish /var/lib/varnish; \
     # add bash
-    apk add bash;
+    apk add bash curl;
 
 WORKDIR /etc/varnish
 
