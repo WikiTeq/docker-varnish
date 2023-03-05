@@ -55,9 +55,10 @@ RUN set -e;\
 
 WORKDIR /etc/varnish
 
-COPY scripts/ /usr/local/bin/
+COPY scripts/docker-varnish-entrypoint.sh /usr/local/bin/docker-varnish-entrypoint.sh
+COPY scripts/wait-for-it.sh /usr/local/bin/wait-for-it.sh
 
-ENTRYPOINT ["/usr/local/bin/docker-varnish-entrypoint"]
+ENTRYPOINT ["/usr/local/bin/docker-varnish-entrypoint.sh"]
 
 USER varnish
 EXPOSE 80 8443
