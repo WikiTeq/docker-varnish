@@ -51,7 +51,7 @@ RUN set -e;\
     apk del --no-network varnish-build-deps; \
     rm -rf ~builder /pkg-varnish-cache /varnish-modules /vmod-dynamic /etc/sudoers.d/builder; \
     deluser --remove-home builder; \
-    chown varnish /var/lib/varnish \
+    chown varnish /var/lib/varnish; \
     # add bash
     apk add bash;
 
