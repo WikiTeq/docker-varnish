@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 echo >&2 "Waiting for backend to start"
-bash /usr/local/bin/wait-for-it.sh -t $WAIT_TIMEOUT "$WAIT_TARGET"
+/usr/local/bin/wait-for-it.sh -t $WAIT_TIMEOUT "$WAIT_TARGET"
 
 # this will check if the first argument is a flag
 # but only works if all arguments require a hyphenated flag
