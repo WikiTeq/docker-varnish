@@ -14,7 +14,7 @@ ENV  VMOD_DEPS="automake curl libtool make pkgconfig py3-sphinx"
 ENV VARNISH_SIZE 100M
 
 RUN set -e;\
-    BASE_PKGS="tar alpine-sdk sudo py3-docutils python3 autoconf automake libtool"; \
+    BASE_PKGS="tar alpine-sdk sudo py3-docutils python3 autoconf automake libtool bash"; \
     apk add --virtual varnish-build-deps -q --no-progress --update $BASE_PKGS; \
     adduser -D builder; \
     echo "builder ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/builder; \
